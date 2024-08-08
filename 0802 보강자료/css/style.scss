@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+li{list-style: none;}
+
+//공통클래스
+.d-flex{
+    display: flex !important;
+}
+.jcc{
+    justify-content: center !important;
+}
+.jcb{
+    justify-content: space-between !important;
+}
+.aic{
+    align-items: center !important;
+}
+.flex-col{
+    flex-direction: column !important;
+}
+.border{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+ul{ max-width: 1200px;
+    margin: 0 auto;
+   
+    @media (max-width:767px) { //767 이하
+        max-width: 500px;
+        flex-direction: column; // li들을 수직축
+    }
+    li{ 
+        @media (min-width:1024px) { //1024이상일때
+            &.d-flex{
+            display: block !important;
+            }
+        }
+        div{
+                &.thumbimg{
+                    //썸네일 최대 너비 270
+                    //li 너비의 80% 
+                    width: 80%; //모바일
+                    @media (min-width:575px) {
+                        width: 270px; //큰사이즈 태블릿 이상
+                    }
+                    img{ max-width: 100%;
+                    //내 원래 사이즈보다 작아지면 100%
+                    }
+                }
+        }
+       div{ 
+            &.des{
+                h3{}
+                p.point{}
+                p.ex{}
+            }
+       }
+    }
+}

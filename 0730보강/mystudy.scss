@@ -1,0 +1,44 @@
+body, ul, li, h1, h2, h3, p, div{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+button{
+    border: 0;
+    background-color: transparent;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    background-image: url(https://simage.lottechilsung.co.kr/display/corner/3905/6d22c7e2_main_new_pc_cocorichpouch.jpg);
+    max-width: 600px;
+    background-size: 200% auto;
+    background-position: center right;
+    li{
+      background-color: black;
+      opacity: 1;
+      transition: 0.5s;
+      &:hover{
+        opacity: 0;
+        a:before{
+            content: "+";
+            color: yellow;
+        }
+      }
+            a{
+                color: white;
+                line-height: 3;
+                // padding: 15px 0;
+                // display: block; // inline태그는 상하 패딩이 안됨
+                &:after{
+                    content: "+";
+                    color: yellow;
+                }
+            }
+       }       
+    }
